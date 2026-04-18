@@ -13,9 +13,9 @@ from .recommender import load_songs, recommend_songs
 
 def print_table_header(title: str):
     """Print a formatted section header"""
-    print("\n" + "=" * 100)
+    print("\n" + "=" * 50)
     print(f"  {title}")
-    print("=" * 100)
+    print("=" * 50)
 
 
 def print_song_table(recommendations, max_width: int = 100):
@@ -31,7 +31,7 @@ def print_song_table(recommendations, max_width: int = 100):
     # Header
     header = f"{'#':<{col_rank}} | {'Title':<{col_title}} | {'Artist':<{col_artist}} | {'Score':<{col_score}} | {'Match':<{col_match}}"
     print("\n" + header)
-    print("-" * 100)
+    print("-" * 50)
     
     # Rows
     for rank, (song, score, explanation) in enumerate(recommendations, 1):
@@ -165,9 +165,9 @@ def main() -> None:
     print_diversity_comparison(songs, profiles[0]["prefs"], profiles[0]["name"])
     
     # Summary
-    print("\n\n" + "=" * 100)
+    print("\n\n" + "=" * 50)
     print("  PHASE COMPLETE! Summary of new features:")
-    print("=" * 100)
+    print("=" * 50)
     print("""
   Challenge 1 (Advanced Features):
   - Added 5 new song attributes: popularity, release_decade, artist_id, mood_tags, year
@@ -190,7 +190,7 @@ def main() -> None:
   - Included reason explanations for each recommendation
   - Better readability than line-by-line output
     """)
-    print("=" * 100)
+    print("=" * 50)
 
 
 if __name__ == "__main__":

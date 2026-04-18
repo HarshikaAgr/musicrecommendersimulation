@@ -178,6 +178,68 @@ You can add more tests in `tests/test_recommender.py`.
 
 ---
 
+## Advanced Features (Phase 6)
+
+I expanded the system with 5 new song features and 4 different scoring modes:
+
+### New Song Attributes in CSV
+- **popularity** (0-100): How likely people stream this song
+- **release_decade**: Era when released (80s, 90s, 2000s, 2010s, 2020s)
+- **artist_id**: Unique number for each artist (used for diversity logic)
+- **mood_tags**: Detailed mood descriptors (e.g., "nostalgic;peaceful;rainy")
+- **year**: Exact release year
+
+### Multiple Scoring Modes
+
+The system now supports 4 different recommendation strategies:
+
+#### 1. **Balanced Mode** (default)
+Original scoring with all features weighted equally:
+- Genre: 30pts, Mood: 20pts, Energy: 15pts, Valence: 10pts, Danceability: 10pts, Acousticness: 5pts
+- Use when: User wants general recommendations
+
+#### 2. **Genre-First Mode**
+For users who are genre-strict:
+- Genre: 45pts (heavily prioritized!), Mood: 15pts, Energy: 12pts, others lower
+- Use when: User says "I ONLY like rock" or "I want pop only"
+
+#### 3. **Mood-First Mode**
+For users seeking a specific vibe or feeling:
+- Mood: 40pts, Mood tags: 8pts each, Valence: 12pts, Genre: 15pts
+- Checks mood tags for deeper vibe matching
+- Use when: User says "I need something peaceful" or "something uplifting"
+
+#### 4. **Energy-Focused Mode**
+For activities (workouts, parties):
+- Energy: 30pts, Danceability: 25pts, Tempo: 8pts, Valence: 10pts
+- Use when: User needs high-energy music for a specific activity
+
+**How to use:**
+```python
+# In src/main.py or your code:
+recommend_songs(user_profile, songs, k=5, mode="energy-focused")
+recommend_songs(user_profile, songs, k=5, mode="mood-first")
+```
+
+### Diversity & Fairness Logic
+
+To prevent recommendations from clustering (e.g., 5 songs all by one artist), I added a diversity penalty:
+- If an artist appears twice in recommendations: -5 points
+- If a genre appears twice: -3 points
+- Result: More variety across different artists and genres
+
+**Example:**
+Without diversity, a pop fan might get: [Sunrise City, Night Drive Loop] (both by Neon Echo)
+With diversity, you get: [Sunrise City by Neon Echo, Gym Hero by Max Pulse] (different artists)
+
+**How to use:**
+```python
+recommend_songs(user_profile, songs, apply_diversity=True)   # With diversity (default)
+recommend_songs(user_profile, songs, apply_diversity=False)  # Without diversity
+```
+
+---
+
 ## Experiments You Tried
 
 Use this section to document the experiments you ran. For example:
