@@ -1,11 +1,19 @@
-id,title,artist,genre,mood,energy,tempo_bpm,valence,danceability,acousticness
-1,Sunrise City,Neon Echo,pop,happy,0.82,118,0.84,0.79,0.18
-2,Midnight Coding,LoRoom,lofi,chill,0.42,78,0.56,0.62,0.71
-3,Storm Runner,Voltline,rock,intense,0.91,152,0.48,0.66,0.10
-4,Library Rain,Paper Lanterns,lofi,chill,0.35,72,0.60,0.58,0.86
-5,Gym Hero,Max Pulse,pop,intense,0.93,132,0.77,0.88,0.05
-6,Spacewalk Thoughts,Orbit Bloom,ambient,chill,0.28,60,0.65,0.41,0.92
-7,Coffee Shop Stories,Slow Stereo,jazz,relaxed,0.37,90,0.71,0.54,0.89
-8,Night Drive Loop,Neon Echo,synthwave,moody,0.75,110,0.49,0.73,0.22
-9,Focus Flow,LoRoom,lofi,focused,0.40,80,0.59,0.60,0.78
-10,Rooftop Lights,Indigo Parade,indie pop,happy,0.76,124,0.81,0.82,0.35
+id,title,artist,genre,mood,energy,tempo_bpm,valence,danceability,acousticness,popularity,release_decade,artist_id,mood_tags,year
+1,Sunrise City,Neon Echo,pop,happy,0.82,118,0.84,0.79,0.18,82,2020s,1,uplifting;energetic;euphoric,2023
+2,Midnight Coding,LoRoom,lofi,chill,0.42,78,0.56,0.62,0.71,75,2020s,2,nostalgic;calm;midnight,2022
+3,Storm Runner,Voltline,rock,intense,0.91,152,0.48,0.66,0.10,68,2010s,3,aggressive;powerful;driving,2018
+4,Library Rain,Paper Lanterns,lofi,chill,0.35,72,0.60,0.58,0.86,70,2020s,4,peaceful;introspective;rainy,2021
+5,Gym Hero,Max Pulse,pop,intense,0.93,132,0.77,0.88,0.05,85,2020s,5,energetic;motivational;pumping,2024
+6,Spacewalk Thoughts,Orbit Bloom,ambient,chill,0.28,60,0.65,0.41,0.92,55,2010s,6,ethereal;spacey;dreamy,2019
+7,Coffee Shop Stories,Slow Stereo,jazz,relaxed,0.37,90,0.71,0.54,0.89,62,2000s,7,retro;sophisticated;warm,2008
+8,Night Drive Loop,Neon Echo,synthwave,moody,0.75,110,0.49,0.73,0.22,78,2010s,1,nostalgic;retro;neon,2017
+9,Focus Flow,LoRoom,lofi,focused,0.40,80,0.59,0.60,0.78,80,2020s,2,productive;concentration;zen,2023
+10,Rooftop Lights,Indigo Parade,indie pop,happy,0.76,124,0.81,0.82,0.35,72,2010s,8,uplifting;indie;summery,2015
+11,Island Vibes,Reggae Soul,reggae,uplifting,0.68,95,0.78,0.71,0.75,65,2000s,9,tropical;relaxed;groovy,2005
+12,Country Roads,Dusty Lane,country,relaxed,0.55,88,0.72,0.65,0.85,58,1990s,10,nostalgic;storytelling;acoustic,1998
+13,Beat Drop,Neon Pulse,house,energetic,0.87,125,0.75,0.90,0.12,79,2010s,11,electronic;dancing;festival,2016
+14,Midnight Trap,Street Echo,hip-hop,aggressive,0.79,96,0.42,0.68,0.25,71,2010s,12,urban;raw;edgy,2014
+15,Symphonic Metal,Thunder Forge,metal,intense,0.95,160,0.35,0.72,0.08,64,2000s,13,epic;powerful;orchestral,2009
+16,Piano Dreams,Quiet Keys,classical,peaceful,0.32,70,0.68,0.42,0.95,52,1980s,14,elegant;timeless;beautiful,1985
+17,R&B Smooth,Jazz Groove,r&b,smooth,0.64,102,0.76,0.75,0.58,73,2010s,15,groovy;smooth;soulful,2012
+18,Acoustic Folk,Wood & String,folk,peaceful,0.45,92,0.70,0.55,0.92,60,1990s,16,organic;authentic;storytelling,1995
